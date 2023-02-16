@@ -77,7 +77,6 @@ function drawTalk(sprite, tX, tY, side, alpha, Sspeed){
 		}
 			if (side == "R" && alpha == "flicker") {
 							global.spriteRSPEED = Sspeed;
-			animateFlicker("R");
 			}
 			if (side == "L") {
 			global.spriteLA = alpha;
@@ -85,6 +84,5 @@ function drawTalk(sprite, tX, tY, side, alpha, Sspeed){
 		}
 					if (side == "L") {
 								global.spriteLSPEED = Sspeed;
-			animateFlicker("L");
 		}
 }

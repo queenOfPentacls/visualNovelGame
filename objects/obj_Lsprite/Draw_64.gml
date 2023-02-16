@@ -1,11 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
 if(global.drawLSprite){
+	if(alarm[0] == -1){
+alarm[0] = 60;
+}
+
 	obj_Lsprite.visible = true;
 	sprite_index = global.previousSpriteL;
     x = global.previousSpriteLX;
     y = global.previousSpriteLY;
-	show_debug_message(image_alpha)
 	animateFlicker(self);
 	image_speed = global.spriteLSPEED;
 	global.previousSpriteLX = 	clamp(global.previousSpriteLX, -100, 100);

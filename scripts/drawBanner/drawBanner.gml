@@ -21,6 +21,7 @@ if(global.bannerCollide){
          global.rotate = (global.rotate + 1) % array_length(global.angles);
 		 global.banner_yscale_to_draw = 1;
          unwind = false;
+		 story.alarm[0] = 60;
          global.storyStep++;
       }
 

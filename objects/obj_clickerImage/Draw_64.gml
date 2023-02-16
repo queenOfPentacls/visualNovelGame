@@ -18,6 +18,7 @@ gpu_set_blendmode(bm_normal);
     }
 	    if (position_meeting(mouse_x, mouse_y, self) && mouse_check_button_pressed(mb_left)) {
 			global.storyStep++
+			story.alarm[0] = 60;
 			global.drawClicker = false;
 			obj_clickerImage.visible = false;
 		}
