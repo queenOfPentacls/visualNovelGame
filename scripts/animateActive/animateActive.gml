@@ -8,12 +8,17 @@ function animateActive(side, talkSpeed){
 	restPos[R] = room_width + 100; 
 	
 	var tweenSpeed = .2;
+	var alphaTweenSpeed = .2;
+	var alphaFaded = 0.5;
 	
 	switch side{
 		case L: 
 			global.spriteSPEED[L] = talkSpeed;
+			global.spriteALPHA[L] += (1 - global.spriteALPHA[L]) * alphaTweenSpeed;
 			global.previousSpriteX[L] += (talkPos[L] - global.previousSpriteX[L]) * tweenSpeed;
+			
 			global.spriteSPEED[R] = 0;
+			global.spriteALPHA[R] += (alphaFaded - global.spriteALPHA[R]) * alphaTweenSpeed;
 			global.previousSpriteX[R] += (restPos[R] - global.previousSpriteX[R]) * tweenSpeed;
 			//global.spriteSPEED[L] = talkSpeed;
 			//global.previousSpriteX[L] += advanceSpeed * delta;
@@ -23,22 +28,31 @@ function animateActive(side, talkSpeed){
 		
 		case R: 
 			global.spriteSPEED[R] = talkSpeed;
+			global.spriteALPHA[R] += (1 - global.spriteALPHA[R]) * alphaTweenSpeed;
 			global.previousSpriteX[R] += (talkPos[R] - global.previousSpriteX[R]) * tweenSpeed;
+			
 			global.spriteSPEED[L] = 0;
+			global.spriteALPHA[L] += (alphaFaded - global.spriteALPHA[L]) * alphaTweenSpeed;
 			global.previousSpriteX[L] += (restPos[L] - global.previousSpriteX[L]) * tweenSpeed;
 			break;
 			
 		case "kill": 
-			global.spriteSPEED[R] = 0;
 	        global.spriteSPEED[L] = 0;
-	        global.previousSpriteX[R] += (restPos[R] - global.previousSpriteX[R]) * tweenSpeed;
+			global.spriteALPHA[L] += (alphaFaded - global.spriteALPHA[L]) * alphaTweenSpeed;
 	        global.previousSpriteX[L] += (restPos[L] - global.previousSpriteX[L]) * tweenSpeed;
+			
+			global.spriteSPEED[R] = 0;
+			global.spriteALPHA[R] += (alphaFaded - global.spriteALPHA[R]) * alphaTweenSpeed;
+	        global.previousSpriteX[R] += (restPos[R] - global.previousSpriteX[R]) * tweenSpeed;
 			break;	
 			
 		case "both": 
-			global.spriteSPEED[R] = talkSpeed;
 	        global.spriteSPEED[L] = talkSpeed;
+			global.spriteALPHA[R] += (1 - global.spriteALPHA[R]) * alphaTweenSpeed;
 	        global.previousSpriteX[L] += (talkPos[L] - global.previousSpriteX[L]) * tweenSpeed;
+			
+			global.spriteSPEED[R] = talkSpeed;
+			global.spriteALPHA[R] += (1 - global.spriteALPHA[R]) * alphaTweenSpeed;
 	        global.previousSpriteX[R] += (talkPos[R] - global.previousSpriteX[R]) * tweenSpeed;
 			break;	
 			

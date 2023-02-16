@@ -1,3 +1,4 @@
+if(live_call()) return live_result;
 if(global.drawSprite[side]){
 	if(alarm[0] == -1){
 		alarm[0] = 60;
@@ -11,8 +12,25 @@ if(global.drawSprite[side]){
 	//set facing direction based on side
 	image_xscale = side = L ? 1 : -1; 
 	
-	animateFlicker(self, 4);
 	image_speed = global.spriteSPEED[side];
+	image_alpha = global.spriteALPHA[side];
+	
+	animateFlicker(self, 4);
+	
+	gpu_set_fog(1, c_black, 0, 1);
+	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, 1);
+	gpu_set_fog(0, c_white, 0, 0);
+	
+	
+	trail_x[0] += (x - trail_x[0])*.2;
+	trail_x[1] += (x - trail_x[1])*.1;
+	shader_set(shdr_dynaDither);
+	if(image_alpha >= 1){
+		draw_sprite_ext(sprite_index, image_index, trail_x[0], y, image_xscale, image_yscale, image_angle, image_blend, image_alpha * .1);
+		draw_sprite_ext(sprite_index, image_index, trail_x[1], y, image_xscale, image_yscale, image_angle, image_blend, image_alpha * .05);
+	}
+	draw_self();
+	shader_reset();
 	
 	//clamp x pos based on side
 	switch side{
