@@ -1,6 +1,5 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function storySteps() {
+  if(live_call()) return live_result;
   switch (global.storyStep) {
     case 0:
 	  setBackground(spriteLeft);
@@ -10,7 +9,7 @@ function storySteps() {
       break;
     case 1:
 	  setBackground("kill");
-      stageScript("L","stretchBanner", "Welcome", bun, 0 - 100, 0,  1, 0.5, bun, room_width + 100, 0, 1, 0);
+      stageScript("L","stretchBanner", "Wlcome", bun, 0 - 100, 0,  1, 0.5, bun, room_width + 100, 0, 1, 0);
 
 	  break;
     case 2:
