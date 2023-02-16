@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "animateFlicker",
+  "name": "animateFlickerOLD",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

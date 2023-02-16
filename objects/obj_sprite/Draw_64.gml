@@ -11,7 +11,7 @@ if(global.drawSprite[side]){
 	//set facing direction based on side
 	image_xscale = side = L ? 1 : -1; 
 	
-	animateFlicker(self);
+	animateFlicker(self, 4);
 	image_speed = global.spriteSPEED[side];
 	
 	//clamp x pos based on side

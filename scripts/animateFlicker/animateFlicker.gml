@@ -1,18 +1,23 @@
-function animateFlicker(object){
-		if(object.alarm[0] == 0){
-	show_debug_message("uhmm");
-	object.alphaToBe += 0.25
-
-	image_alpha = object.alphaToBe;
-		show_debug_message(image_alpha)
-		object.alarm[0] = 5;
-	}
-	if(object.alarm[0] =! 0 && image_alpha != 1){
-	image_alpha = 0;
-	}
-		if(object.alarm[0] =! 0 && image_alpha == 1){
-		object.alarm[0] = -1;
-		image_alpha = 1;
-		object.hasFlickered = true;
+/// @description animateFlicker(object, freq);
+/// @param object
+/// @param freq
+function animateFlicker(){
+	var object = argument[0];
+	var freq   = argument[1];
+	
+	if(flicker){
+		if(flicker % freq == 0){
+			object.image_alpha = 0;
+		}
+		else{
+			object.image_alpha += 0.25;
+		}
+		
+		//set alpha back to 1 on last frame of flicker
+		if(flicker - 1 <= 0){
+			image_alpha = 1;
+		}
+		
+		flicker--;
 	}
 }
