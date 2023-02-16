@@ -1,37 +1,36 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function animateActive(side, talkSpeed){
-    var delta = delta_time / 1000000; // Convert delta time to seconds
     var advanceSpeed = 120;
 	var retreatSpeed = 90;
-    if(side == "L"){
-        global.spriteLSPEED = talkSpeed;
-        global.previousSpriteLX += advanceSpeed * delta;
+    if(side == L){
+        global.spriteSPEED[L] = talkSpeed;
+        global.previousSpriteX[L] += advanceSpeed * delta;
     }else{
-        global.spriteLSPEED = 0;
-        global.previousSpriteLX -= retreatSpeed * delta;
+        global.spriteSPEED[L] = 0;
+        global.previousSpriteX[L] -= retreatSpeed * delta;
     }
     
-    if(side == "R"){
-        global.spriteRSPEED = talkSpeed;
-        global.previousSpriteRX -= advanceSpeed * delta;
+    if(side == R){
+        global.spriteSPEED[R] = talkSpeed;
+        global.previousSpriteX[R] -= advanceSpeed * delta;
     }else{
-        global.spriteRSPEED = 0;
-        global.previousSpriteRX += retreatSpeed * delta;
+        global.spriteSPEED[R] = 0;
+        global.previousSpriteX[R] += retreatSpeed * delta;
     }
     
     if(side == "kill"){
-        global.spriteRSPEED = 0;
-        global.spriteLSPEED = 0;
-        global.previousSpriteRX += retreatSpeed * delta;
-        global.previousSpriteLX -= retreatSpeed * delta;
+        global.spriteSPEED[R] = 0;
+        global.spriteSPEED[L] = 0;
+        global.previousSpriteX[R] += retreatSpeed * delta;
+        global.previousSpriteX[L] -= retreatSpeed * delta;
     }
     
     if(side == "both"){
-        global.spriteRSPEED = talkSpeed;
-        global.spriteLSPEED = talkSpeed;
-        global.previousSpriteLX += advanceSpeed * delta;
-        global.previousSpriteRX -= advanceSpeed * delta;
+        global.spriteSPEED[R] = talkSpeed;
+        global.spriteSPEED[L] = talkSpeed;
+        global.previousSpriteX[L] += advanceSpeed * delta;
+        global.previousSpriteX[R] -= advanceSpeed * delta;
     }
 	
 	if(side == "trueKill"){

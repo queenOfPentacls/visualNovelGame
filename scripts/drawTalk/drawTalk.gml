@@ -1,86 +1,58 @@
 function drawTalk(sprite, tX, tY, side, alpha, Sspeed){  
-		if (side == "R" && sprite != "kill") {
-			global.drawRSprite = true;
+		if (side == R && sprite != "kill") {
+			global.drawSprite[R] = true;
 		}
-		if (side == "L" && sprite != "kill") {
-			global.drawLSprite = true;
+		if (side == L && sprite != "kill") {
+			global.drawSprite[L] = true;
 		}
 	if (sprite == "previous") {
-		if (side == "L") {
-			sprite = global.previousSpriteL;
-		}
-		else {
-			sprite = global.previousSpriteR;
-		}
+		sprite = global.previousSprite[side];
 	}
 	else {
-		if (side == "L") {
-			global.previousSpriteL = sprite;
-		}
-		else {
-			global.previousSpriteR = sprite;
-		}
+		global.previousSprite[side] = sprite;
 	}
 
 	if (tX == "previous") {
-		if (side == "L") {
-			tX = global.previousSpriteLX;
-		}
-		else {
-			tX = global.previousSpriteRX;
-		}
+		tX = global.previousSpriteX[side];
 	}
 	else {
-		if (side == "L") {
-			global.previousSpriteLX = tX;
-		}
-		else {
-			global.previousSpriteRX = tX;
-		}
+		global.previousSpriteX[side] = tX;
 	}
 
 	if (tY == "previous") {
-		if (side == "L") {
-			tY = global.previousSpriteLY;
-		}
-		else {
-			tY = global.previousSpriteRY;
-		}
+		tY = global.previousSpriteY[side];
 	}
 	else {
-		if (side == "L") {
-			global.previousSpriteLY = tY;
-		}
-		else {
-			global.previousSpriteRY = tY;
-		}
+		global.previousSpriteY[side] = tY;
 	}
 	
-	if (side == "L" && sprite == "kill") {
-			global.drawLSprite = false;
-		}
+	if (side == L && sprite == "kill") {
+		global.drawSprite[L] = false;
+	}
 		
-	if (side == "L") {
-			global.spriteLA = alpha;
-			global.spriteLSPEED = Sspeed;
-		}
-	if (side == "R" && sprite == "kill") {
-			global.drawRSprite = false;
-		}
-
+	if (side == L) {
+		global.spriteLA = alpha;
+		global.spriteSPEED[L] = Sspeed;
+	}
+	
+	if (side == R && sprite == "kill") {
+		global.drawSprite[R] = false;
+	}
 		
-	if (side == "R") {
-			global.spriteRA = alpha;
-			global.spriteRSPEED = Sspeed;
-		}
-			if (side == "R" && alpha == "flicker") {
-							global.spriteRSPEED = Sspeed;
-			}
-			if (side == "L") {
-			global.spriteLA = alpha;
-			global.spriteLSPEED = Sspeed;
-		}
-					if (side == "L") {
-								global.spriteLSPEED = Sspeed;
-		}
+	if (side == R) {
+		global.spriteRA = alpha;
+		global.spriteSPEED[R] = Sspeed;
+	}
+	
+	if (side == R && alpha == "flicker") {
+		global.spriteSPEED[R] = Sspeed;
+	}
+			
+	if (side == L) {
+		global.spriteLA = alpha;
+		global.spriteSPEED[L] = Sspeed;
+	}
+	if (side == L) {
+		global.spriteSPEED[L] = Sspeed;
+	}
 }

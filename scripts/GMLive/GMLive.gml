@@ -3898,7 +3898,7 @@ function gml_action_list_print_action_get_func_name(l_func){
 if(live_enabled)
 function gml_action_list_print_action(l_act){
 	var l_pos=gml_std_haxe_enum_tools_getParameter(l_act,0);
-	var l_pre="L"+string(l_pos.h_row)+"\tc"+string(l_pos.h_col)+"\t";
+	var l_pre=L+string(l_pos.h_row)+"\tc"+string(l_pos.h_col)+"\t";
 	var l_r=l_pre+gml_std_Type_enumConstructor(l_act);
 	switch(l_act.__enumIndex__){
 		case 123:return l_pre+("{ tag : \""+l_act.h_tag+"\",")+string_delete(string(l_act.h_ctx),1,1);

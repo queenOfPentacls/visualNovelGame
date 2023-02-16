@@ -1,5 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
+
+
 global.storyStep = 0;
 global.rotate = 0;
 global.bannerCollide = false;
