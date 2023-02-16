@@ -22,13 +22,11 @@ if(global.drawSprite[side]){
 	gpu_set_fog(0, c_white, 0, 0);
 	
 	
-	trail_x[0] += (x - trail_x[0])*.2;
-	trail_x[1] += (x - trail_x[1])*.1;
+	trail_x[0] += (x - trail_x[0])*.4;
+	trail_x[1] += (x - trail_x[1])*.2;
 	shader_set(shdr_dynaDither);
-	if(image_alpha >= 1){
-		draw_sprite_ext(sprite_index, image_index, trail_x[0], y, image_xscale, image_yscale, image_angle, image_blend, image_alpha * .1);
-		draw_sprite_ext(sprite_index, image_index, trail_x[1], y, image_xscale, image_yscale, image_angle, image_blend, image_alpha * .05);
-	}
+	draw_sprite_ext(sprite_index, image_index, trail_x[0], y, image_xscale, image_yscale, image_angle, image_blend, .1);
+	draw_sprite_ext(sprite_index, image_index, trail_x[1], y, image_xscale, image_yscale, image_angle, image_blend, .05);
 	draw_self();
 	shader_reset();
 	
