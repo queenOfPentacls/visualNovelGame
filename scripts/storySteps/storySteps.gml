@@ -9,11 +9,11 @@ function storySteps() {
       break;
     case 1:
 	  setBackground("kill");
-      stageScript(L,"stretchBanner", "Welcome", bun, 0 - 100, 0,  1, 0.5, bun, room_width + 100, 0, 1, 0);
+      stageScript(L,"stretchBanner", "%Welcome%", bun, 0 - 100, 0,  1, 0.5, bun, room_width + 100, 0, 1, 0);
 
 	  break;
     case 2:
-      stageScript(L,"stretchBanner", "bzzzzt", "previous", "previous", "previous", "flicker", 0.5, "previous", "previous", "previous", 100, 0);
+      stageScript(L,"stretchBanner", "#bzzzzt#", "previous", "previous", "previous", "flicker", 0.5, "previous", "previous", "previous", 100, 0);
       break;
 	case 3:
       stageScript(R,"stretchBanner", "bzzzzzzzzzzzzzzzzzzzzzt", "previous", "previous", "previous", 100, 0, "previous", "previous", "previous", 100, 1);
@@ -23,7 +23,7 @@ function storySteps() {
       break;
 	case 5:
 	  setBackground(chapterEnd);
-      stageScript("both","stretchBanner", "thats all folks...", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
+      stageScript("both","stretchBanner", "thats all &folks..&.", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
 
 	  break;
 	case 6:

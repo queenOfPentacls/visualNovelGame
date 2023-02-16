@@ -1,6 +1,6 @@
 if(variable_global_exists("bannerDialogue")){
-	if(str != global.bannerDialogue){
-		str = global.bannerDialogue;
+	if(str != string_sanitize(global.bannerDialogue)){
+		str = string_sanitize(global.bannerDialogue);
 		strInit();
 	}
 }
