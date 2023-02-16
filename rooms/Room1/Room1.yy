@@ -9,8 +9,8 @@
   "instanceCreationOrder": [
     {"name":"inst_7C0DB994","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_59D8958","path":"rooms/Room1/Room1.yy",},
-    {"name":"inst_6C1F220F","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_12497EEE","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_6C1F220F","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_6FDC4D4C","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_6EE2FCEE","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_6D338B3B","path":"rooms/Room1/Room1.yy",},

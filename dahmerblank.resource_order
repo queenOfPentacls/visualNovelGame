@@ -42,6 +42,7 @@
     {"name":"Sprite3","order":13,"path":"sprites/Sprite3/Sprite3.yy",},
     {"name":"b2","order":6,"path":"sprites/b2/b2.yy",},
     {"name":"spriteLeft","order":3,"path":"sprites/spriteLeft/spriteLeft.yy",},
+    {"name":"animateFlicker","order":13,"path":"scripts/animateFlicker/animateFlicker.yy",},
     {"name":"bun","order":8,"path":"sprites/bun/bun.yy",},
   ],
 }

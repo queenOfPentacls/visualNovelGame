@@ -5,7 +5,7 @@ if(global.drawRSprite){
 	sprite_index = global.previousSpriteR;
     x = global.previousSpriteRX;
     y = global.previousSpriteRY;
-    image_alpha = global.spriteRA;
+	animateFlicker(self);
 	image_speed = global.spriteRSPEED;
 	image_xscale = -1;
 	global.previousSpriteRX = 	clamp(global.previousSpriteRX, room_width-100, room_width + 100);

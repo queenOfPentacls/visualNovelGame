@@ -10,12 +10,11 @@ function storySteps() {
       break;
     case 1:
 	  setBackground("kill");
-	  global.drawRSprite = true;
-	  global.drawLSprite = true;
-      stageScript("L","stretchBanner", "Welcome", bun, 0 - 100, 0, 100, 0.5, bun, room_width + 100, 0, 0.5, 0);
+      stageScript("L","stretchBanner", "Welcome", bun, 0 - 100, 0,  1, 0.5, bun, room_width + 100, 0, 1, 0);
+
 	  break;
     case 2:
-      stageScript("L","stretchBanner", "bzzzzt", "previous", "previous", "previous", 100, 0.5, "previous", "previous", "previous", 100, 0);
+      stageScript("L","stretchBanner", "bzzzzt", "previous", "previous", "previous", "flicker", 0.5, "previous", "previous", "previous", 100, 0);
       break;
 	case 3:
       stageScript("R","stretchBanner", "bzzzzzzzzzzzzzzzzzzzzzt", "previous", "previous", "previous", 100, 0, "previous", "previous", "previous", 100, 1);

@@ -5,14 +5,13 @@ if(global.drawLSprite){
 	sprite_index = global.previousSpriteL;
     x = global.previousSpriteLX;
     y = global.previousSpriteLY;
-    image_alpha = global.spriteLA;
-	image_speed = 1;
+	show_debug_message(image_alpha)
+	animateFlicker(self);
 	image_speed = global.spriteLSPEED;
-	      show_debug_message(global.previousSpriteLX)
 	global.previousSpriteLX = 	clamp(global.previousSpriteLX, -100, 100);
-	if(global.activeSpeaker = "L" ||global.activeSpeaker = "kill" ||global.activeSpeaker = "both"){
+	if(global.activeSpeaker = "L" || global.activeSpeaker = "kill" || global.activeSpeaker ="both"){
 		animateActive(global.activeSpeaker, global.spriteLSPEED)
-	}else{
-		obj_Lsprite.visible = false;
 	}
+}else{
+	obj_Rsprite.visible = false;
 }

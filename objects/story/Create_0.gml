@@ -12,4 +12,10 @@ global.drawBackground = true;
 global.activeBanner = undefined;
 
 
+global.spriteRA = 0;
+global.spriteLA = 0;
+
+
+
+
 
