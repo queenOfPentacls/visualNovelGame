@@ -68,6 +68,7 @@
     {"id":{"name":"text_effect_wavy","path":"scripts/text_effect_wavy/text_effect_wavy.yy",},"order":3,},
     {"id":{"name":"GMLive_exec","path":"scripts/GMLive_exec/GMLive_exec.yy",},"order":1,},
     {"id":{"name":"bun","path":"sprites/bun/bun.yy",},"order":0,},
+    {"id":{"name":"font_dialogue","path":"fonts/font_dialogue/font_dialogue.yy",},"order":0,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
