@@ -22,7 +22,9 @@ if(global.bannerCollide){
 		 global.banner_yscale_to_draw = 1;
          unwind = false;
 		 story.alarm[0] = 60;
+		 strobeController.alarm[0] = 20;
          global.storyStep++;
+		 playPiano();
       }
 
    if(global.activeBanner == "stretchBanner"){

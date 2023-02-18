@@ -1,5 +1,2 @@
-
-
-  // Calculate the corners of the sprite
-	sprite_index = white;
+sprite_index = white;
 	
