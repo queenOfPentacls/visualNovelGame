@@ -4,3 +4,5 @@ if(variable_global_exists("bannerDialogue")){
 		strInit();
 	}
 }
+
+text_effects_controller();

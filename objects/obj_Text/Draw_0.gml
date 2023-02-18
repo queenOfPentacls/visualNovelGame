@@ -28,8 +28,6 @@ if(global.activeBanner == "stretchBanner"){
 	}
 	shader_reset();
 	
-	text_effects_controller();	
-	
 	//if(global.bannerCollide){
 	//	draw_set_colour(c_white);
 	//}else{
