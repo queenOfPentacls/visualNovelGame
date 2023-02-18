@@ -9,11 +9,13 @@
 // Define an easing function to slow down the animation
     var easing = border.borderSpeed;
 
-// Set the shader
-shader_set(shdr_dynaDither);
-
 // Draw the border
 if (global.drawBorder) {
+	
+	
+	// Set the shader
+	shader_set(shdr_dynaDither);
+	
     // Check if the alpha value is within the desired range
     if (image_alpha <= 0.25) {
         border.down = true;
@@ -50,4 +52,6 @@ if (global.drawBorder) {
     // Draw the border with the new alpha value
     draw_sprite_stretched_ext(global.setBorder, -1, camera_get_view_x(view_camera[0]), camera_get_view_y(view_camera[0]), camera_get_view_width(view_camera[0]), camera_get_view_height(view_camera[0]) + 10, c_white, image_alpha);
 
+	shader_reset();
 }
+
