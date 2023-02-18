@@ -24,7 +24,7 @@ function storySteps() {
 	case 3:
 	  strobeController.drawStrobe = false;
 	  border.borderSpeed = 0.5
-      stageScript(R,"stretchBanner", "&bzzzzzzzzzzzzz&zzzzzt", "previous", "previous", "previous", 100, 0, "previous", "previous", "previous", 100, 1);
+      stageScript(R,"stretchBanner", "#bzzzzzz#zzzzzzz%zzzzzt%", "previous", "previous", "previous", 100, 0, "previous", "previous", "previous", 100, 1);
       break;
 	case 4:
 	  strobeController.drawStrobe = false;

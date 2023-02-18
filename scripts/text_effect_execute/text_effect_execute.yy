@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "string_sanitize",
+  "name": "text_effect_execute",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

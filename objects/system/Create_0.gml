@@ -1,5 +1,6 @@
 game_set_speed(60, gamespeed_fps);
 time = 0;
+debugmode = true;
 
 //left/right macros
 #macro L 0
