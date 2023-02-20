@@ -15,6 +15,7 @@ global.activeBanner = undefined;
 global.spriteRA = 0;
 global.spriteLA = 0;
 
+global.voxOn = true;
 
 
-
+window_set_cursor(cr_none);

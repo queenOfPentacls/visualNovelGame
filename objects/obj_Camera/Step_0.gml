@@ -29,5 +29,4 @@
      camY = clamp(camY, 0, room_height-camera_get_view_height(view_camera[0]));
 
 
-	 show_debug_message(mouse_y);
      camera_set_view_pos(view_camera[0], camX, camY);

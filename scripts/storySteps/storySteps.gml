@@ -39,6 +39,12 @@ function storySteps() {
       stageScript("both","stretchBanner", "thats all &folks......&", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
 
 	  break;
+	 case 7:
+	 setBackground(spriteLeft);
+	 drawChoice("hello", 1, 100, 100, 1, 1);
+      stageScript("trueKill","choice", "thats all &folks......&", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
+
+	  break;
 
     default:
       break;

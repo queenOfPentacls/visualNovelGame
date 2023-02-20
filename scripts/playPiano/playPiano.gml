@@ -4,5 +4,4 @@ function playPiano(){
 piano_sound=irandom(7);
 sound = "piano" + string(piano_sound);
 audio_play_sound(asset_get_index(sound), global.storyStep, 0, 1, 1)
-show_debug_message(sound)
 }

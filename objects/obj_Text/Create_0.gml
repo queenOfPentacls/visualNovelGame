@@ -1,5 +1,4 @@
 if(live_call()) return live_result;
-
 str = "";
 typeSpd = 0.5;
 
