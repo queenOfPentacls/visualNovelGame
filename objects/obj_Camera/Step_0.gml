@@ -15,12 +15,19 @@
      y += (yTo - y) / 25;
 
 
+	if(global.screenshake){
+		var shakeAmount = global.screenshake;
+		var shakeDecay  = 2;
+		screenshake_x = random_range(shakeAmount/shakeDecay, -shakeAmount/shakeDecay);
+		screenshake_y = random_range(shakeAmount/shakeDecay, -shakeAmount/shakeDecay);
+		
+		global.screenshake--;
+	}
 
 
+     camX = -(camera_get_view_width(view_camera[0]) / 2) + x + screenshake_x;
 
-     camX = -(camera_get_view_width(view_camera[0]) / 2) + x;
-
-     camY = -(camera_get_view_height(view_camera[0]) / 2) + y;
+     camY = -(camera_get_view_height(view_camera[0]) / 2) + y + screenshake_y;
 
 
 

@@ -7,3 +7,5 @@ debugmode = true;
 #macro R 1
 
 #macro delta delta_time / 1000000 // Convert delta time to seconds
+
+global.screenshake = 0;
