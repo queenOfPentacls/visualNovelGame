@@ -55,7 +55,15 @@ function storySteps() {
 	  break;
 	 	 case 9:
 	 show_debug_message(global.activeBanner)
-     stageScript("trueKill","stretchBanner", "thats all &folks......&", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
+     stageScript("trueKill","stretchBanner", "getting this to work", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
+	  break;
+	 	 case 10:
+	 show_debug_message(global.activeBanner)
+     stageScript("trueKill","stretchBanner", "was a #fucking#", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
+	  break;
+	 	 case 11:
+	 show_debug_message(global.activeBanner)
+     stageScript("trueKill","stretchBanner", "%nightmare%", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
 	  break;
     default:
       break;
