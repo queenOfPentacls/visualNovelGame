@@ -19,3 +19,12 @@ global.voxOn = true;
 
 
 window_set_cursor(cr_none);
+
+global.innerStep = 0;
+
+global.drawChoice = false;
+
+global.collide = false;
+
+global.collide1 = false;
+global.collide2 = false;

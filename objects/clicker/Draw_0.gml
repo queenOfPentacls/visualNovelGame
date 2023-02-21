@@ -4,8 +4,8 @@ sprite_index = scissor;
 image_xscale = 0.15;
 image_yscale = 0.15;
 image_speed = 0;
-show_debug_message(image_index)
-if(global.bannerCollide && !clicked){
+
+if((global.bannerCollide || global.collide1 || global.collide2) && !clicked){
  hover = true	
 }else{
  hover = false

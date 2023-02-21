@@ -6,3 +6,4 @@ image_index = 7;
 sprite_index = scissor;
 hoverClick = false;
 loopone = false;
+clicker.smallPosition = false;

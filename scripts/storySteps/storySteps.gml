@@ -40,12 +40,23 @@ function storySteps() {
 
 	  break;
 	 case 7:
+	 show_debug_message(global.activeBanner)
 	 setBackground(spriteLeft);
-	 drawChoice("hello", 1, 100, 100, 1, 1);
-      stageScript("trueKill","choice", "thats all &folks......&", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
-
+     stageScript("trueKill","choice", "thats all &folks......&", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
+	 createChoice("HELTER", 200, 200, 2, 1, "SKELTER", 600, 200, 3, 1) 
 	  break;
-
+	 	case 8:
+	 	 if(global.innerStep ==  1){
+	 stageScript("trueKill","stretchBanner", "beatles", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
+	 }
+	 if(global.innerStep ==  2){
+	 stageScript("trueKill","stretchBanner", "beach boys", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
+	 }
+	  break;
+	 	 case 9:
+	 show_debug_message(global.activeBanner)
+     stageScript("trueKill","stretchBanner", "thats all &folks......&", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
+	  break;
     default:
       break;
   }

@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "createChoice",
+  "name": "Script46",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
