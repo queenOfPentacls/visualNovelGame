@@ -1,11 +1,14 @@
-
+if(live_call()) return live_result;
      var xTo, yTo;
 
 
-     move_towards_point(window_mouse_get_x(), window_mouse_get_y(), 0);
+     move_towards_point(mouse_x, mouse_y, 0);
+	 
+	 var xPan = 32;
+	 var yPan = mouse_y > y ? 8 : 48;
 
-     xTo = obj_Anchor.x + lengthdir_x(min(32, distance_to_point(window_mouse_get_x(), window_mouse_get_y())), direction);
-     yTo = obj_Anchor.y + lengthdir_y(min(32, distance_to_point(mouse_x, mouse_y)), direction);
+     xTo = obj_Anchor.x + lengthdir_x(min(xPan, distance_to_point(mouse_x, mouse_y)), direction);
+     yTo = obj_Anchor.y + lengthdir_y(min(yPan, distance_to_point(mouse_x, mouse_y)), direction);
 
 
 
