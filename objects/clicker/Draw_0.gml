@@ -52,8 +52,8 @@ if(surface_exists(am_surface)){
 }
 else am_surface = surface_create(camW, camH);
 
-//draw_after_image(2, 0, 0.5, c_white, true); // super subtle
+draw_after_image(2, 0, 0.5, c_white, true); // super subtle
 //draw_after_image(3, 0, 0.05, c_white, true); // subtle
-draw_after_image(5, 1, 0.05, c_white, true); // not subtle
+//draw_after_image(5, 1, 0.05, c_white, true); // not subtle
 //draw_after_image(10, 1, 0.00001, c_white, true); // ermm this guys must have been on acid xD
 draw_self();
