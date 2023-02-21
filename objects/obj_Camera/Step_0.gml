@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+
      var xTo, yTo;
 
 
@@ -25,15 +24,15 @@
 	}
 
 
-     camX = -(camera_get_view_width(view_camera[0]) / 2) + x + screenshake_x;
+     camX = -(camW / 2) + x + screenshake_x;
 
-     camY = -(camera_get_view_height(view_camera[0]) / 2) + y + screenshake_y;
+     camY = -(camH / 2) + y + screenshake_y;
 
 
 
-     camX = clamp(camX, 0, room_width-camera_get_view_width(view_camera[0]));
+     camX = clamp(camX, 0, room_width-camW);
 
-     camY = clamp(camY, 0, room_height-camera_get_view_height(view_camera[0]));
+     camY = clamp(camY, 0, room_height-camH);
 
 
      camera_set_view_pos(view_camera[0], camX, camY);
