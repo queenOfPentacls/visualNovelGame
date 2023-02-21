@@ -7,3 +7,6 @@ sprite_index = scissor;
 hoverClick = false;
 loopone = false;
 clicker.smallPosition = false;
+
+am_surface = surface_create(camW, camH);
+am_time = 0;

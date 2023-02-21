@@ -84,6 +84,7 @@
     {"id":{"name":"piano7","path":"sounds/piano7/piano7.yy",},"order":0,},
     {"id":{"name":"wvox","path":"sounds/wvox/wvox.yy",},"order":0,},
     {"id":{"name":"floralpattern","path":"sprites/floralpattern/floralpattern.yy",},"order":0,},
+    {"id":{"name":"draw_after_image","path":"scripts/draw_after_image/draw_after_image.yy",},"order":3,},
     {"id":{"name":"story","path":"objects/story/story.yy",},"order":0,},
     {"id":{"name":"setBorder","path":"scripts/setBorder/setBorder.yy",},"order":0,},
     {"id":{"name":"obj_sprite","path":"objects/obj_sprite/obj_sprite.yy",},"order":1,},
