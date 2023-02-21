@@ -18,7 +18,7 @@ function storySteps() {
 	  strobeController.drawStrobe = true;
 	  setBorder(border13);
 	  global.drawBorder = true;
-	  setBackground(beach);
+	  setBackground("miku_drowns.mp4");
       stageScript(L,"stretchBanner", "#bzzzzt#", "previous", "previous", "previous", "flicker", 0.5, "previous", "previous", "previous", 100, 0);
       break;
 	case 3:

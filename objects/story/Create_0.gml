@@ -9,6 +9,7 @@ global.banner_yscale_to_draw = 1;
 global.banner_x = room_width/2;
 global.banner_y = room_height/1.15;
 global.drawBackground = true;
+global.drawVideo = false;
 global.activeBanner = undefined;
 
 
@@ -28,3 +29,6 @@ global.collide = false;
 
 global.collide1 = false;
 global.collide2 = false;
+
+
+last_image = undefined;

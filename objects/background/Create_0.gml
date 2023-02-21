@@ -1,3 +1,2 @@
-
-
-
+videoLoaded = false;
+video = undefined;
