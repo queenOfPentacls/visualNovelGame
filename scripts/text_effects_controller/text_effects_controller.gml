@@ -1,27 +1,45 @@
 function text_effects_controller(){
-	if(variable_global_exists("bannerDialogue")){
-		var start = 0;
-		var stop  = 0;
+	if(variable_global_exists("bannerDialogue") && global.activeBanner == "stretchBanner"){
+		var str = global.bannerDialogue;
 		
-		if(string_count("&", global.bannerDialogue)){
-			start = string_pos("&", global.bannerDialogue) - 1;
-			stop  = string_last_pos("&", global.bannerDialogue) - 1;
-		
-			text_effect_creepy(start, stop);
+		if(string_count("&", str)){
+			str = text_effect_execute(str, "&", text_effect_creepy);
 		}
 		
-		if(string_count("%", global.bannerDialogue)){
-			start = string_pos("%", global.bannerDialogue) - 1;
-			stop  = string_last_pos("%", global.bannerDialogue) - 1;
-		
-			text_effect_wavy(start, stop);
+		if(string_count("%", str)){
+			str = text_effect_execute(str, "%", text_effect_wavy);
 		}
 		
-		if(string_count("#", global.bannerDialogue)){
-			start = string_pos("#", global.bannerDialogue) - 1;
-			stop  = string_last_pos("#", global.bannerDialogue) - 1;
+		if(string_count("#", str)){
+			str = text_effect_execute(str, "#", text_effect_vibrate);
+		}
+	}
+ 	if(variable_global_exists("choice1Dialogue") && global.activeBanner == "choice"){
+		var str = global.choice1Dialogue;
+		var str2 = global.choice2Dialogue;
 		
-			text_effect_vibrate(start, stop);
+		if(string_count("&", str)){
+			str = text_effect_execute(str, "&", text_effect_creepy);
+		}
+		
+		if(string_count("&", str2)){
+			str2 = text_effect_execute(str2, "&", text_effect_creepy);
+		}
+		
+		if(string_count("%", str)){
+			str = text_effect_execute(str, "%", text_effect_wavy);
+		}
+		
+		if(string_count("%", str2)){
+			str2 = text_effect_execute(str2, "%", text_effect_wavy);
+		}
+		
+		if(string_count("#", str)){
+			str = text_effect_execute(str, "#", text_effect_vibrate);
+		}
+	
+		if(string_count("#", str2)){
+			str2 = text_effect_execute(str2, "#", text_effect_vibrate);
 		}
 	}
 }

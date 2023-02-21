@@ -8,7 +8,11 @@ function setActiveStoryBanner(banner){
 	    obj_collisionBanner.visible = false;
 		obj_banner.visible = false;
 		obj_Text.visible = false;
-	}else{
+	}
+	if(banner == "choice"){
+		global.activeBanner = "choice"
+	}
+	else{
 		return true;
 	}
 	

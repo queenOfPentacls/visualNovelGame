@@ -1,7 +1,8 @@
 if(live_call()) return live_result;
-
 str = "";
 typeSpd = 0.5;
+
+iStep = 1;
 
 kerningFuck = 5;
 
@@ -18,6 +19,7 @@ strInit = function()
 		txtYVar[i] = 0;
 		txtXOff[i]  = random_range(kerningFuck,-kerningFuck);
 		txtYOff[i]  = 0;
+		alpha[i] = 0;
 	}
 }
 
