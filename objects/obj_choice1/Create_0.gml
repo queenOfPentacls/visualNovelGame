@@ -23,3 +23,5 @@ speedRate = minSpeedRate;
 maxTrailRate = 8;
 minTrailRate = 6;
 trailRate = minTrailRate;
+
+alarm[0]=-1;

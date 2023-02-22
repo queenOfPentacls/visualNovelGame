@@ -5,8 +5,13 @@ show_debug_message(image_xscale)
 trailSpeed = clamp(trailSpeed, minSpeed, maxSpeed)
 speedRate = clamp(speedRate, minSpeedRate, maxSpeedRate);
 trailRate = clamp(trailRate, minTrailRate, maxTrailRate);
+show_debug_message(alarm[0])
 shader_set(shdr_dynaDither);
-if (position_meeting(mouse_x, mouse_y, self)) {
+if(position_meeting(mouse_x, mouse_y, self)){
+	alarm[0]=10;
+}
+if (alarm[0] != -1) {
+
 	if(speedRate<maxSpeedRate){
 	speedRate += 1;
 	}
@@ -32,7 +37,7 @@ if (position_meeting(mouse_x, mouse_y, self)) {
 	global.innerStep = iStep
 	global.storyStep++
 	}
-}else{
+}if(alarm[0]==-1){
 	if(speedRate>minSpeedRate){
 	speedRate -= 0.5;
 	}
