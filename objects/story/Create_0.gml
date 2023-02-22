@@ -1,6 +1,6 @@
 
 
-global.storyStep = 0;
+global.storyStep = -1;
 global.rotate = 0;
 global.bannerCollide = false;
 global.angles = [0, 5, -3, 4, -1];

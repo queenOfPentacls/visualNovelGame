@@ -15,8 +15,16 @@ drawBannerCollide();
 }
 if(global.bannerCollide){
 	image_index_to_draw = 1;
-	
+	shader_set(shdr_dynaDither);
 	gpu_set_blendenable(false)
+	gpu_set_colorwriteenable(false,false,false,true);
+	draw_set_alpha(0);
+	draw_rectangle(0,0, room_width,room_height, false);
+	
+	draw_set_alpha(1);
+	draw_sprite_ext(white,0, global.banner_x, global.banner_y, global.banner_xscale_to_draw, global.banner_yscale_to_draw, global.angles[global.rotate], c_white, 1);
+	gpu_set_blendenable(true);
+	gpu_set_colorwriteenable(true,true,true,true);
 	gpu_set_colorwriteenable(false,false,false,true);
 	draw_set_alpha(0);
 	draw_rectangle(0,0, room_width,room_height, false);
@@ -28,11 +36,15 @@ if(global.bannerCollide){
 
 	gpu_set_blendmode_ext(bm_dest_alpha,bm_inv_dest_alpha);
 	gpu_set_alphatestenable(true);
+	draw_sprite_ext(dotted, 0, mouse_x-22, global.banner_y, 2, 2
+	,5, c_white, 0.5);
 	draw_sprite_ext(floralpattern, 0, global.banner_x, global.banner_y, 1, 1, global.angles[global.rotate], c_white, 0.25);
 	gpu_set_alphatestenable(false);
 	gpu_set_blendmode(bm_normal);
 
 
+}else{
+shader_reset();
 }
 
       if (mouse_check_button_pressed(mb_left) && global.bannerCollide && collider) {

@@ -19,9 +19,8 @@ draw_rectangle_colour(x-sprite_width/2, y-sprite_height/2, x+sprite_width/2, y+s
 gpu_set_blendmode(bm_normal);
     }
 	    if (position_meeting(mouse_x, mouse_y, self) && mouse_check_button_pressed(mb_left)) {
-			audio_play_sound(chime, 0, 0)
+			audio_play_sound(chime, 10, 0)
 			global.storyStep++
-			story.alarm[0] = 60;
 			global.drawClicker = false;
 			obj_clickerImage.visible = false;
 		}

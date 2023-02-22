@@ -8,7 +8,7 @@ image_xscale = 0.15;
 image_yscale = 0.15;
 image_speed = 0;
 
-if((global.bannerCollide || global.collide1 || global.collide2) && !clicked){
+if((global.bannerCollide || obj_choice1.collide || obj_choice2.collide) && !clicked){
  hover = true	
 }else{
  hover = false
