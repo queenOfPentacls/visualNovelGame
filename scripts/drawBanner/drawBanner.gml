@@ -37,7 +37,7 @@ if(global.bannerCollide){
 	gpu_set_blendmode_ext(bm_dest_alpha,bm_inv_dest_alpha);
 	gpu_set_alphatestenable(true);
 	draw_sprite_ext(dotted, 0, mouse_x-22, global.banner_y, 2, 2
-	,5, c_white, 0.5);
+	, -global.angles[global.rotate], c_white, 0.5);
 	draw_sprite_ext(floralpattern, 0, global.banner_x, global.banner_y, 1, 1, global.angles[global.rotate], c_white, 0.25);
 	gpu_set_alphatestenable(false);
 	gpu_set_blendmode(bm_normal);
