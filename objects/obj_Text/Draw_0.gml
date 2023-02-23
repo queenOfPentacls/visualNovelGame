@@ -2,7 +2,7 @@
 // You can write your code in this editor
 if(live_call()) return live_result;
 
-if(global.activeBanner == "stretchBanner"){
+if(global.activeBanner == "stretchBanner" && !obj_sprite.flicker){
 	draw_set_font(font_dialogue);
 	
 	txtColor = global.bannerCollide ? c_white : c_black;

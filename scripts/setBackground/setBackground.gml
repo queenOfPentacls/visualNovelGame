@@ -1,10 +1,6 @@
 
 
-function setBackground(image){
-	if (image == last_image) exit;
-	else{
-		last_image = image;
-		
+function setBackground(image, minIndex, maxIndex){
 		if(image == "kill"){
 			global.drawBackground = false;
 			global.drawVideo = false;
@@ -20,6 +16,7 @@ function setBackground(image){
 			global.drawBackground = true;
 			global.setBackground = image;
 			global.drawVideo = false;
+			background.minIndex = minIndex;
+			background.maxIndex = maxIndex;
 		}
 	}
-}

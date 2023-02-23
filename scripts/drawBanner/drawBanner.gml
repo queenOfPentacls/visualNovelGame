@@ -54,6 +54,9 @@ shader_reset();
 		 story.alarm[0] = 60;
 		 strobeController.alarm[0] = 20;
          global.storyStep++;
+		 if(nextFlicker == true){
+		 obj_sprite.flicker = global.flickerTime
+		 }
 		 playPiano();
       }
 

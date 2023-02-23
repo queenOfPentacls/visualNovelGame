@@ -1,6 +1,10 @@
 if(global.drawBackground){
-	draw_sprite_stretched(global.setBackground, -1, 0, 0, room_width,room_height);
-	image_speed = 0.25
+	image_index = clamp(image_index, minIndex, maxIndex)
+	if(image_index == maxIndex){
+	image_index = minIndex;
+	}
+	draw_sprite_stretched(global.setBackground, image_index, 0, 0, room_width,room_height);
+	
 }
 
 if(global.drawVideo){

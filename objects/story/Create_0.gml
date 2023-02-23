@@ -32,3 +32,9 @@ global.collide2 = false;
 
 
 last_image = undefined;
+
+global.flickerTime = 120;
+
+var lay_id = layer_get_id("Background");
+var back_id = layer_background_get_id(lay_id);
+layer_background_alpha(back_id, 0.25);
