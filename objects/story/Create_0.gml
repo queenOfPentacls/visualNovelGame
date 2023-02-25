@@ -1,6 +1,6 @@
 
 
-global.storyStep = -1;
+global.storyStep = -2;
 global.rotate = 0;
 global.bannerCollide = false;
 global.angles = [0, 5, -3, 4, -1];
@@ -38,3 +38,9 @@ global.flickerTime = 120;
 var lay_id = layer_get_id("Background");
 var back_id = layer_background_get_id(lay_id);
 layer_background_alpha(back_id, 0.25);
+
+stopAlarm = false;
+transitionTime = 400;
+alarm[1] = transitionTime;
+
+global.drawClicker = false;

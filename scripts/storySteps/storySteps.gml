@@ -1,21 +1,22 @@
 function storySteps() {
   if(live_call()) return live_result;
   switch (global.storyStep) {
-    case -1:
-	  draw_text(50, room_height -100, "//sound doesnt play in first room when running html 5, lol")
-	  setBackground(spriteRight, 0, 0);
-	  setClickerImage(chapterEnd, room_width/2, room_height/2, 0.5, 0.5);
+	case -2:
+	  setBackground(opcredits, 0, 4)
 	  global.drawSprite[R] = false;
 	  global.drawSprite[L] = false;
 	  global.drawBorder = false;
       break;
+    case -1:
+	  setBackground(opcredits, 4, 5)
+      break;
     case 0:
-	  setBackground(spriteLeft, 0, 0);
-	  setClickerImage(chapterEnd, room_width/2, room_height/2, 0.25, 0.25);
+	  setBackground(opcredits, 6, 8)
       break;
     case 1:
+	  stopAlarm = true
 	  audio_play_sound(rain, 0, 1, 1)
-	  setBackground("kill",0, 0)
+	  setBackground(black,0, 0)
 	  obj_collisionBanner.nextFlicker = true;
       stageScript("kill","stretchBanner", "[CUT HERE]", empty, 0 - 100, 0,  0, 0.5, empty, room_width + 100, 0, 0, 0);
 
