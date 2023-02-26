@@ -1,2 +1,3 @@
 sprite_index = white;
+
 	

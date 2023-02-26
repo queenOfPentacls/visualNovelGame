@@ -19,4 +19,3 @@ void main()
     v_vTexcoord = in_TextureCoord;
     v_vPosition = in_Position.xy;
 }
-

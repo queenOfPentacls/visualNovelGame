@@ -50,7 +50,7 @@ if (global.drawBorder) {
     image_alpha += diff * easing;
 
     // Draw the border with the new alpha value
-    draw_sprite_stretched_ext(global.setBorder, -1, camera_get_view_x(view_camera[0]), camera_get_view_y(view_camera[0]), camera_get_view_width(view_camera[0]), camera_get_view_height(view_camera[0]) + 10, c_white, image_alpha);
+    draw_sprite_stretched_ext(global.setBorder, -1, camera_get_view_x(view_camera[0]), camera_get_view_y(view_camera[0]), camW, camH + 10, c_white, image_alpha);
 
 	shader_reset();
 }

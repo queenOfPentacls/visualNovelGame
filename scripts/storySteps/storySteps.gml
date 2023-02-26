@@ -1,49 +1,55 @@
 function storySteps() {
   if(live_call()) return live_result;
   switch (global.storyStep) {
-    case 0:
-	  setBackground(spriteLeft);
-	  setClickerImage(chapterEnd, room_width/2, room_height/2, 0.5, 0.5);
+	case -2:
+	  setBackground(opcredits, 0, 4)
 	  global.drawSprite[R] = false;
 	  global.drawSprite[L] = false;
 	  global.drawBorder = false;
       break;
+    case -1:
+	  setBackground(opcredits, 4, 5)
+      break;
+    case 0:
+	  setBackground(opcredits, 6, 8)
+      break;
     case 1:
-	  setBackground("kill");
-
-      stageScript("kill","stretchBanner", "%Welcome%", bun, 0 - 100, 0,  1, 0.5, bun, room_width + 100, 0, 1, 0);
+	  stopAlarm = true
+	  audio_play_sound(rain, 0, 1, 1)
+	  setBackground(black,0, 0)
+	  obj_collisionBanner.nextFlicker = true;
+      stageScript("kill","stretchBanner", "[CUT HERE]", empty, 0 - 100, 0,  0, 0.5, empty, room_width + 100, 0, 0, 0);
 
 	  break;
     case 2:
+	  show_debug_message(obj_sprite.flicker)
+	  obj_collisionBanner.nextFlicker = false;
+	  background.image_speed = 0.15
 	  strobeController.drawStrobe = true;
-	  setBorder(border13);
-	  global.drawBorder = true;
-	  setBackground(beach);
-      stageScript(L,"stretchBanner", "#bzzzzt#", "previous", "previous", "previous", "flicker", 0.5, "previous", "previous", "previous", 100, 0);
+	  setBackground(op, 0, 9);
+      stageScript("kill","stretchBanner", "&...I...Live...!....&", "previous", "previous", "previous", "flicker", 0.5, "previous", "previous", "previous", 100, 0);
       break;
 	case 3:
 	  strobeController.drawStrobe = false;
-	  border.borderSpeed = 0.5
-      stageScript(R,"stretchBanner", "#bzzzzzz#zzzzzzz%zzzzzt%", "previous", "previous", "previous", 100, 0, "previous", "previous", "previous", 100, 1);
+      stageScript("trueKill","stretchBanner", "&...33 years&", "previous", "previous", "previous", "flicker", 0, "previous", "previous", "previous", "flicker", 1);
       break;
 	case 4:
-	  strobeController.drawStrobe = false;
-	  border.borderSpeed = 0.5
-      stageScript(L,"stretchBanner", "LOL!", "previous", "previous", "previous", 100, 0.25, "previous", "previous", "previous", 100, 1);
+      stageScript("trueKill","stretchBanner", "&..clutching brimstone walls&", "previous", "previous", "previous", 100, 0.25, "previous", "previous", "previous", 100, 1);
       break;
     case 5:
-      stageScript("kill","stretchBanner", "wow!", "previous", "previous", "previous", 100, 1, "previous", "previous", "previous", 100, 0);
+	  strobeController.drawStrobe = true;
+	  background.image_speed = 0.25;
+	  setBackground(op, 10, 18);
+      stageScript("trueKill","stretchBanner", "%sulfur% fills my &lungs&", "previous", "previous", "previous", 100, 1, "previous", "previous", "previous", 100, 0);
       break;
 	case 6:
-	  setBackground(chapterEnd);
+	  setBorder("kill");
       stageScript("both","stretchBanner", "thats all &folks......&", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
 
 	  break;
 	 case 7:
-	 show_debug_message(global.activeBanner)
-	 setBackground(spriteLeft);
-     stageScript("trueKill","choice", "thats all &folks......&", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
-	 createChoice("HELTER", 200, 200, 2, 1, "SKELTER", 600, 200, 3, 1) 
+     stageScript("trueKill","choice", "thats all &folks......&", "kill", "previous", "previous", 1, 1, "kill", "previous", "previous", 100, 0.5);
+	 createChoice("HELTER", 150, 200, 1,1, "SKELTER", room_width-150, 200, 1, 1) 
 	  break;
 	 	case 8:
 	 	 if(global.innerStep ==  1){
@@ -54,8 +60,13 @@ function storySteps() {
 	 }
 	  break;
 	 	 case 9:
-	 show_debug_message(global.activeBanner)
-     stageScript("trueKill","stretchBanner", "thats all &folks......&", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
+     stageScript("trueKill","stretchBanner", "getting this to work [in html5]", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
+	  break;
+	 	 case 10:
+     stageScript("trueKill","stretchBanner", "was a #fucking#", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
+	  break;
+	 	 case 11:
+     stageScript("trueKill","stretchBanner", "%nightmare%", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
 	  break;
     default:
       break;

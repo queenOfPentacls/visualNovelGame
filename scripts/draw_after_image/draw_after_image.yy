@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "Script46",
+  "name": "draw_after_image",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
