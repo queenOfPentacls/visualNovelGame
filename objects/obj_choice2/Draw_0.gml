@@ -1,11 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 if(global.activeBanner == "choice"){
-show_debug_message(image_xscale)
 trailSpeed = clamp(trailSpeed, minSpeed, maxSpeed)
 speedRate = clamp(speedRate, minSpeedRate, maxSpeedRate);
 trailRate = clamp(trailRate, minTrailRate, maxTrailRate);
-show_debug_message(alarm[0])
 shader_set(shdr_dynaDither);
 if(position_meeting(mouse_x, mouse_y, self)){
 	alarm[0]=10;

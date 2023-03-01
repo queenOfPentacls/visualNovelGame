@@ -18,6 +18,10 @@ global.spriteLA = 0;
 
 global.voxOn = true;
 
+global.audioTrack1 = false
+global.audioTrack2 = false
+global.track1 = rain
+global.track2 = rain
 
 window_set_cursor(cr_none);
 
@@ -34,6 +38,8 @@ global.collide2 = false;
 last_image = undefined;
 
 global.flickerTime = 120;
+global.voxPitch = 1.5;
+
 
 var lay_id = layer_get_id("Background");
 var back_id = layer_background_get_id(lay_id);
@@ -44,3 +50,4 @@ transitionTime = 400;
 alarm[1] = transitionTime;
 
 global.drawClicker = false;
+global.bannerSound = "piano"

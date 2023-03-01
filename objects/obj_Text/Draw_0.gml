@@ -24,7 +24,7 @@ if(global.activeBanner == "stretchBanner" && !obj_sprite.flicker){
 	for(i = 0; i < floor(t); i++){
 		if(t<len && !obj_sprite.flicker && global.voxOn && !audio_is_playing(asset_get_index(string_lower(char[i])+"vox"))) {
 			if(audio_exists(asset_get_index(string_lower(char[i])+"vox"))){
-			audio_play_sound(asset_get_index(string_lower(char[i])+"vox"), 1, 0, 0.1, 0, 1.5)
+			audio_play_sound(asset_get_index(string_lower(char[i])+"vox"), 1, 0, 0.1, 0, global.voxPitch)
 			}
 			if(!audio_is_playing(cut) && !audio_is_playing(asset_get_index(string_lower(char[i])+"vox"))){
 			audio_play_sound(cut, 1, 0, 0.1, 0, 1)

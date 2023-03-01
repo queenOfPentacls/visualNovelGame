@@ -1,7 +1,15 @@
 if(global.drawBackground){
 	image_index = clamp(image_index, minIndex, maxIndex)
 	if(image_index == maxIndex){
+		if(loop == 0){
+		image_speed = 0
+	}
+	if(loop == 1){
 	image_index = minIndex;
+	}
+	if(loop == 2){
+		global.storyStep++
+	}
 	}
 	draw_sprite_stretched(global.setBackground, image_index, 0, 0, room_width,room_height);
 	
