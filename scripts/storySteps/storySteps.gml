@@ -11,7 +11,7 @@ function storySteps() {
 	  setBackground(opcredits, 4, 5)
       break;
     case 0:
-	  setBackground(opcredits, 6, 8)
+	  setBackground(opcredits, 5, 7)
       break;
     case 1:
 	  global.bannerSound = "horn"
@@ -78,25 +78,109 @@ function storySteps() {
 	 break;
 	  	 case 12:
 	global.activeBanner="kill"
-    background.image_speed = 0.02
+    background.image_speed = 0.05
     background.loop = 2;
-    setBackground(gate, 0, 28);
-    audio_stop_sound(rain)
+    setBackground(gate, 0, 27);
     global.voxPitch = 1.5
     global.audioTrack2 = false
 	audio_stop_sound(global.audioTrack2)
+	audio_stop_sound(rain)
 	 break;
 	  	 case 13:
 	  audio_stop_sound(global.audioTrack2)
+	  audio_stop_sound(electronicGate)
 	  background.loop = 0;
       obj_collisionBanner.nextFlicker = true;
 	  global.flickerTime = 220;
-	  stageScript("kill","stretchBanner", "But we're not in hell anymore.", empty, 0 - 100, 0,  0, 0.5, empty, room_width + 100, 0, 0, 0);
+	  global.spin = 1;
+	  stageScript("kill","stretchBanner", "But we're not in #hell# anymore.", empty, 0 - 100, 0,  0, 0.5, empty, room_width + 100, 0, 0, 0);
 	  break;
 	  	 case 14:
-		
+		global.spin++
 		global.voxPitch = 1.5
-     stageScript("kill","stretchBanner", "..........", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
+		shader_set(shdr_dynaDither);
+		draw_sprite_ext(flower, -1, room_width/2, room_height/2, 1, 1, global.spin, c_white, 0.5)
+		 global.track2 = river
+		 global.audioTrack2 = true
+     stageScript("kill","stretchBanner", "...", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
+	  break;
+	  	 case 15:
+		 shader_reset();
+		background.image_speed = 0.25
+		background.loop = 1;
+		setBackground(tree, 0, 6);
+		global.audioTrack2 = false
+     stageScript("kill","stretchBanner", "....", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
+	  break;
+	  	 case 16:
+		background.image_speed = 0.25;
+		background.loop = 1;
+		setBackground(gun, 0, 3);
+     stageScript("kill","stretchBanner", ".......", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
+	  break;
+	  	 case 17:
+	 global.voxPitch = 0.40;
+	 global.track2 = opmix1;
+	 global.audioTrack2 = true
+     stageScript("kill","stretchBanner", "............yet it still #burns#", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
+	  break;
+	  	 case 18:
+	 global.voxPitch = 1.5;
+	 global.audioPause = true;
+     stageScript("kill","stretchBanner", "I can feel the sun,", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
+	  break;
+	  	 case 19:
+	 global.track2 = opmixcrazy;
+	 global.audioPause = false;
+     stageScript("kill","stretchBanner", "and the wet grass under my feet.", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
+	  break;
+	  	 case 20:
+	 	 global.voxPitch = 0.40
+		 audio_stop_sound(opmix1)
+		 global.track2 = opmix2;
+		 setBackground(butterfly, 0, 6);
+     stageScript("kill","stretchBanner", "#THE AGONY REMAINS.#", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
+	  break;
+	  	 case 21:
+	 	 global.voxPitch = 1.5
+		 audio_stop_sound(opmixcrazy)
+		setBackground(gun, 0, 3);
+		global.audioPause = true;
+     stageScript("kill","stretchBanner", "&standing under a cloudless sky,&", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
+	  break;
+	  	 case 22:
+	 	 global.voxPitch = 1.5
+		 audio_stop_sound(opmixcrazy)
+		 global.track2 = opmixcrazy
+		 global.audioPause = false;
+     stageScript("kill","stretchBanner", "&and there is a light breeze&", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
+	  break;
+	  	 case 23:
+	 	 global.voxPitch = 0.4
+		 audio_stop_sound(opmix2)
+		 setBackground(butterfly, 0, 6);
+		 global.audioPause = true;
+		 obj_collisionBanner.nextFlicker = false;
+     stageScript("kill","stretchBanner", "%even here i am in hell.%", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
+	  break;
+	  	 case 24:
+		 global.track2 = opmix2
+		 global.audioPause = false;
+         stageScript("kill","stretchBanner", "%where ever i go is hell.%", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
+	     obj_collisionBanner.nextFlicker = true;
+		 global.flickerTime = 100;
+	  break;
+	  	 case 25:
+	 	 global.voxPitch = 1.5
+		 audio_stop_sound(opmixcrazy)
+		setBackground(gun, 0, 3);
+		global.audioPause = true;
+		obj_collisionBanner.nextFlicker = false;
+     stageScript("kill","stretchBanner", "We've spent my whole life in hell,", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
+	  break;
+	  	 case 26:
+	 	 global.voxPitch = 1.5
+     stageScript("kill","stretchBanner", "We're used to it.", "previous", "previous", "previous", 1, 1, "previous", "previous", "previous", 100, 0.5);
 	  break;
     default:
       break;

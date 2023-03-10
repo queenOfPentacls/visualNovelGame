@@ -51,3 +51,5 @@ alarm[1] = transitionTime;
 
 global.drawClicker = false;
 global.bannerSound = "piano"
+
+global.audioPause = false

@@ -54,6 +54,7 @@ shader_reset();
 		 story.alarm[0] = 60;
 		 strobeController.alarm[0] = 20;
          global.storyStep++;
+		 if(!global.audioPause){
 		 if (global.audioTrack1)
 		 {
 			 audio_play_sound(global.track1, 0, 1, 1)
@@ -66,7 +67,7 @@ shader_reset();
 		  }else{
 			  audio_stop_sound(global.track2)
 		  }
-
+		 }
 		 if(nextFlicker == true){
 		 obj_sprite.flicker = global.flickerTime
 		 }

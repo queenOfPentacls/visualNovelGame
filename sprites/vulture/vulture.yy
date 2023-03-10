@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "vulture",
-  "bbox_bottom": 799,
+  "bbox_bottom": 449,
   "bbox_left": 0,
-  "bbox_right": 699,
+  "bbox_right": 393,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -18,7 +18,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 800,
+  "height": 450,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"9ec73166-e55c-4af6-aae2-ab080ad0c827","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
@@ -72,5 +72,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 700,
+  "width": 394,
 }
