@@ -9,10 +9,10 @@ if(global.drawBackground){
 	}
 	if(loop == 2){
 		global.storyStep++
+		image_index = maxIndex;
 	}
 	}
 	draw_sprite_stretched(global.setBackground, image_index, 0, 0, room_width,room_height);
-	
 }
 
 if(global.drawVideo){

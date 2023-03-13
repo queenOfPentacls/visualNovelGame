@@ -13,8 +13,11 @@ function setBackground(image, minIndex, maxIndex){
 			global.setVideo = image;
 		}
 		else{
+            if(image != global.setBackground){
+				background.image_index = 0;
+				global.setBackground = image;
+			}
 			global.drawBackground = true;
-			global.setBackground = image;
 			global.drawVideo = false;
 			background.minIndex = minIndex;
 			background.maxIndex = maxIndex;

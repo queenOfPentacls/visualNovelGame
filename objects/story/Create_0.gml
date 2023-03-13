@@ -1,5 +1,7 @@
 
-
+global.drawSprite[R] = false;
+global.drawSprite[L] = false;
+global.drawBorder = false;
 global.storyStep = -2;
 global.rotate = 0;
 global.bannerCollide = false;
@@ -11,7 +13,8 @@ global.banner_y = room_height/1.15;
 global.drawBackground = true;
 global.drawVideo = false;
 global.activeBanner = undefined;
-
+global.setBackground = opcredits;
+background.image_index = 0;
 
 global.spriteRA = 0;
 global.spriteLA = 0;
@@ -20,8 +23,10 @@ global.voxOn = true;
 
 global.audioTrack1 = false
 global.audioTrack2 = false
+global.audioTrack3 = false
 global.track1 = rain
 global.track2 = rain
+global.track3 = chime
 
 window_set_cursor(cr_none);
 
@@ -53,3 +58,5 @@ global.drawClicker = false;
 global.bannerSound = "piano"
 
 global.audioPause = false
+
+global.newBackground = false;

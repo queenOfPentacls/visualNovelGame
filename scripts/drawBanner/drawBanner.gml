@@ -67,6 +67,12 @@ shader_reset();
 		  }else{
 			  audio_stop_sound(global.track2)
 		  }
+		 if (global.audioTrack3)
+		 {
+			 audio_play_sound(global.track3, 0, 0, 1)
+		  }else{
+			  audio_stop_sound(global.track3)
+		  }
 		 }
 		 if(nextFlicker == true){
 		 obj_sprite.flicker = global.flickerTime
